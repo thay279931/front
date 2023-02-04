@@ -1,0 +1,101 @@
+.ShowNearShopFrame {
+  height: 600px;
+  margin: 20px auto 20px auto;
+  width: 1200px;
+  /* border: 5px #fff solid; */
+  border-radius: 10px;
+  /* background-color: var(--mainColor); */
+}
+
+.ChooseShopListOption {
+  overflow: auto;
+  height: 510px;
+  padding: 20px;
+
+}
+
+.ChooseShopListOption::-webkit-scrollbar {
+
+  width: 20px;
+  z-index: 5;
+}
+
+/* 這是拖曳條 */
+.ChooseShopListOption::-webkit-scrollbar-thumb {
+  background-color: var(--mainColor);
+  /* border-radius: 5px; */
+  z-index: 10;
+}
+
+/* 這是拖曳條的背景 */
+.ChooseShopListOption::-webkit-scrollbar-track {
+  background: var(--subColor);
+}
+
+/* 拖曳條的經過顏色  */
+.ChooseShopListOption::-webkit-scrollbar-thumb:hover {
+  background: var(--mainComplementary);
+}
+
+.ChooseShopListCard {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  background-color: var(--subColor);
+  /* box-shadow: 0 13px 27px -5px rgba(50,50,93,0.25), 0 8px 16px -8px rgba(74, 167, 182, 0.3); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: .5s;
+  gap: 10px;
+  position: relative;
+}
+
+.ChooseShopListCard:hover {
+  translate: -2px -2px;
+  box-shadow: 6px 6px 5px 0 currentColor;
+}
+
+.nearShopTextBox {
+  z-index: 5;
+  position: absolute;
+  min-width: 100px;
+  height: 200px;
+  top: -205px;
+  background-color: #fff;
+  /* translate: -50%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.5;
+  border-radius: 10px;
+  border: 5px solid var(--mainColor);
+}
+
+.ChooseShopListCardStar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.nearShopGoShopButton {
+  border: 3px solid var(--mainColor);
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nearShopGoShopButton:hover {
+  background-color: var(--mainColor);
+  border: 3px solid var(--subColor);
+}

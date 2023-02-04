@@ -1,0 +1,107 @@
+.Dstates{
+    height: 50px;
+    padding: 0 25px;
+    background-color: #EBEBEB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Doldlist{
+    width: 100%;
+    list-style: none;
+}
+.Doldlist .Doldeitem{
+    /* background-color: red; */
+    width: 100%;
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+    position: relative;
+    font-size: 1.1em;
+}
+.Dinfo{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Dshopmore{
+    border-top: 1px solid #c1c1c1;
+    /* height: 70px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-start;
+    padding: 15px 45px;
+    flex-direction:column;
+}
+.Dtext{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.Dlisttext{
+    display: flex;
+    align-items: center;
+}
+
+.Dbtn{
+    font-size: 1em;
+    border-radius: 5px;
+    width: 80px;
+    height: 32px;
+    text-align: center;
+    background-color: #3893E8;
+    color: white;
+    letter-spacing: 3px;
+    border: none;
+}
+.Dbtn.Dactive{
+    opacity: 0.5;
+}
+.Dicon{
+    font-size: 2.2em;
+    margin-right: 10px;
+    color: #3893E8;
+}
+.Dcook{
+    text-align: center;
+}
+.Dcooktitle{
+    font-weight: bold;
+}
+.Dcooktext{
+    margin-top: 5px;
+}
+.DDown{
+    /* background-color: red; */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Donliestate{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.Donlie{
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50px;
+    background-color: rgb(75, 203, 11);
+}
+.Donlie.active{
+    background-color: red;
+}
+.Dnothingorder{
+    font-size: 3em;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 10px;
+}

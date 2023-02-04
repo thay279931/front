@@ -1,0 +1,129 @@
+
+.hex img {
+  width: 100%;
+  /* object-fit: cover; */
+}
+
+.FR {
+  width: 100%;
+  aspect-ratio: 4/6;
+  /* background-color: #939; */
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  overflow: hidden;
+  min-height: 800px;
+}
+
+
+.hex {
+  width: 50%;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--mainColor), silver 50%, var(--mainColor));
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: relative;
+  transition: .8s;
+  opacity: 0;
+  z-index: 1;
+  scale: 0.9;
+  overflow: hidden;
+}
+
+.hex:hover {
+  z-index: 2;
+  transition: 0s;
+}
+
+.hex:hover * {
+  transition: 0.8s;
+  scale: 1.2;
+}
+
+.hexImgFR {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  line-height: 0;
+}
+
+.hexImgFR img {
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+.move_odd {
+  top: -5%;
+  right: -5%;
+  transform: translateX(-100%) translateY(0);
+}
+
+.move_even {
+  bottom: -5%;
+  left: -5%;
+  transform: translateX(100%) translateY(0);
+}
+
+.move_odd.movein,
+.move_even.movein {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.hex_txt {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  text-align: center;
+  top: 70%;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+.vh100 {
+  height: 100vh;
+  /* background-color: #ccc; */
+}
+@media screen and (min-width:768px) {
+  .FR {
+      aspect-ratio: 16/9;
+      padding: 30px;
+  }
+  .hex {
+      width: 16.6666%;
+      /* min-height: 50%; */
+      scale: 1.5;
+  }
+
+  .move_odd {
+      top: -20%;
+      right: -5%;
+      transform: translateX(0) translateY(-100%);
+  }
+
+  .move_even {
+      bottom: -20%;
+      left: -5%;
+      transform: translateX(0) translateY(100%);
+  }
+
+  .move_odd.movein,
+  .move_even.movein {
+      transform: translateY(0);
+  }
+
+}

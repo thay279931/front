@@ -1,0 +1,30 @@
+.DBottomNav{
+    list-style: none;
+    box-sizing: border-box;
+    width: 100%; 
+    max-width: 768px;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    background-color: #F9F9F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 10;
+}
+.DBottomNav .Dactive{
+    color: #3893E8;
+}
+.Dnavicon{
+    font-size: 2em;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.Dicontext{
+    text-align: center;
+}
+.DNavber{
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+}

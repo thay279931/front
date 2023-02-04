@@ -1,0 +1,73 @@
+.storeCenter {
+  width: 100%;
+  display: flex;
+  min-height: calc(100vh - 50px);
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+}
+
+.storeCenterList {
+  /* background-color: #eee; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-height: 80px;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 10;
+  gap: 10px;
+}
+
+.storeCenterButton {
+  /* border: 1px red solid; */
+  /* height: 20%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+  color: var(--mainColor);
+  padding: 5px;
+}
+
+.storeContent {
+  background-color: #fff;
+  /* padding: 20px; */
+  /* background-color: #eee; */
+}
+
+@media screen and (min-width:768px) {
+  .storeCenter {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .storeCenterList {
+    position: sticky;
+    top: var(--navHeight);
+    width: 20%;
+    min-height: 500px;
+    /* height: calc(100vh - 80px); */
+    height: 100vh;
+    /* background-color: #ccc; */
+    flex-direction: column;
+    z-index: 2;
+    /* background-color: transparent; */
+    gap: 50px;
+
+    border-right: 1px #222 solid;
+  }
+
+  .storeContent {
+    width: 80%;
+    min-height: calc(100vh - 50px);
+  }
+}
+
+.storeCenterList>.active {
+  color: rgb(145, 105, 5);
+}

@@ -1,0 +1,9 @@
+nav.deliverNav {
+  height: var(--navHeight);
+  background-color: var(--mainColor);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  /* position: relative; */
+  justify-content: space-between;
+}

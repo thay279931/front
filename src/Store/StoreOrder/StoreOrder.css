@@ -1,0 +1,273 @@
+.orderOptions {
+  border-bottom: 3px #222 solid;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 10px;
+  position: sticky;
+  top: var(--navHeight);
+  background-color: #fff;
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.storeOrderSwith {
+  padding: 3px;
+  border-bottom: 5px solid transparent;
+}
+
+.storeOrderSwith.active {
+  border-bottom: 5px solid #000;
+  font-weight: 700;
+}
+
+.storeTimes {
+  display: flex;
+  gap: 10px;
+
+}
+
+.storeTimes>span {
+  cursor: pointer;
+}
+
+.orderDetailsCardCol {
+  width: 50%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width:768px) {
+
+  .orderDetailsCardCol {
+    width: 33.33333%;
+  }
+
+}
+@media screen and (min-width:1024px){
+  .orderDetailsCardCol {
+    width: 25%;
+  }
+}
+
+/* 卡片最外層  */
+.orderDetailsCard {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* gap: 10px; */
+  min-height: 300px;
+  justify-content: space-evenly;
+  margin: 5px;
+  /* margin-top: 10px; */
+  
+  gap: 30px;
+  border-radius: 10px;
+  position: relative;
+  /* color: #fff; */
+  font-weight: 700;
+  padding: 20px;
+  font-size: 18px;
+  border: var(--mainColor) 5px solid;
+  cursor: pointer;
+  margin: auto;
+  line-height: 1.3;
+  
+}
+.orderDetailsCard::after{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 60%;
+  height: 15px;
+  background: linear-gradient(to bottom, var(--mainColor), var(--mainColor) 70%, var(--subColor) 70%, var(--subColor) 100%);
+  top: -10px;
+  left: 50%;
+  translate: -50%;
+  z-index: 2;
+}
+.orderDetailsCard::before{
+      z-index: 1;
+      position: absolute;
+      display: block;
+      content: '';
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: radial-gradient(circle,#ccc,#ccc 30%, var(--mainColor) 30%, var(--mainColor) 100%);
+      clip-path: polygon(0 0 ,100% 0 ,100% 60% ,0 60%);
+      top: -25px;
+      left: 50%;
+      translate: -50%;
+}
+
+/* 卡片背景色 */
+.orderDetailsCard.color0 {
+  /* background-color: var(--subColor); */
+  background: linear-gradient(to bottom, #fff 70%, var(--subColor) 100%);
+  
+}
+
+.orderDetailsCard.color1 {
+  background: linear-gradient(to bottom, #fff 70%, var(--mainColor) 100%);
+}
+
+.orderDetailsCard.color2 {
+  background: linear-gradient(to bottom, #fff 70%, #c22 100%);
+}
+
+@media screen and (min-width:768px) {
+  /* .storeConfirmOrder{
+   max-width: 60%; 
+  } */
+
+}
+
+/* 確認訂單燈窗內容 */
+.storeConfirmOrder {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding-top: 20px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  /* background-color: var(--mainColor); */
+  background-color: #fff;
+  border:5px solid var(--mainColor);
+  border-radius: 10px;
+  position: relative;
+}
+.storeConfirmOrder::after{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 60%;
+  height: 15px;
+  background: linear-gradient(to bottom, var(--mainColor), var(--mainColor) 70%, var(--subColor) 70%, var(--subColor) 100%);
+  top: -10px;
+  left: 50%;
+  translate: -50%;
+  /* z-index: 2; */
+}
+.storeConfirmOrder::before{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle,#ccc,#ccc 30%, var(--mainColor) 30%, var(--mainColor) 100%);
+  clip-path: polygon(0 0 ,100% 0 ,100% 60% ,0 60%);
+  top: -25px;
+  left: 50%;
+  translate: -50%;
+}
+@media screen and (min-width:768px){
+  .storeConfirmOrder{
+    width: 450px;
+  }
+}
+.storeConfirmOrder>p {
+  border-bottom: 3px #ccc solid;
+  vertical-align: middle;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.storeConfirmOrder>* {
+  vertical-align: middle;
+  padding: 15px;
+}
+
+/* .storeConfirmOrder p:nth-child(2n+1){
+  background-color: #aaa;
+} */
+/* 確認訂單燈窗內 顧客姓名+X鈕 */
+.storeConfirmOrderNames {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.storeOrderProductsContents {
+  border-bottom: 3px #ccc solid;
+}
+
+.productDetails {
+  background-color: #FEEEEE;
+  flex-wrap: wrap;
+}
+
+.shopMemos {
+  /* background-color: #ddd; */
+}
+
+.storeConfirmOrderButton {
+  text-align: center;
+  background-color: #3893E8;
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+
+.setTimeButton {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+}
+.storeConfirmOrderAlertButton{
+  /* text-align: center; */
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: #3893E8;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+}
+.storeConfirmOrderAlertButton:hover{
+  background-color: #224f79;
+  color: #ccc;
+  box-shadow: inset 0 0 0 2px rgba(16, 170, 238, 1), 2px 2px 3px 1px rgba(208, 213, 219, 0.28);
+}
+.storeConfirmOnGrayBack{
+  width:100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: 100;
+  /* padding: 5px; */
+  /* border: 1px red solid; */
+  overflow: auto;
+}
+.storeConfirmOnGrayBack::-webkit-scrollbar{
+  width: 10px;
+  z-index: 2;
+}
+/* 這是拖曳條 */
+.storeConfirmOnGrayBack::-webkit-scrollbar-thumb {
+  background-color: var(--mainColor);
+  border-radius: 5px;
+}
+/* 這是拖曳條的背景 */
+.storeConfirmOnGrayBack::-webkit-scrollbar-track{
+  background: var(--subColor);
+}
+/* 拖曳條的經過顏色  */
+.storeConfirmOnGrayBack::-webkit-scrollbar-thumb:hover {
+  background: var(--mainComplementary);
+}

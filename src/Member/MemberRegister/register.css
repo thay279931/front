@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.m_img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* margin-bottom: 10px; */
+}
+
+.m_form{
+    margin: 0 auto;
+    width: 420px;
+}
+
+.m_iner {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:space-between;
+    width: 1440x;
+    /* margin: 0 auto; */
+    height: 1000px;
+}
+
+.m_input_img {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 34px;
+    font-size: 20px;
+}
+
+.m_label {
+    font-size: 24px;
+}
+
+.m_email {
+    width: 400px;
+    padding-left: 7px;
+    border-radius:15px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.m_password {
+    width: 364px;
+    padding-left: 7px;
+    /* border-radius:15px; */
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 41px;
+    font-size: 20px;
+}
+
+.m_doublepassword {
+    width: 364px;
+    padding-left: 7px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.m_name {
+    width: 400px;
+    padding-left: 7px;
+    border-radius:15px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.m_phone {
+    width: 400px;
+    padding-left: 7px;
+    border-radius:15px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.m_sb {
+    border-radius: 15px;
+    background-color: antiquewhite;
+    font-size: 30px;
+    width: 190px;
+    height: 60px;
+}
+
+.m_fast {
+    font-size: 30px;
+}
+
+.m_clear {
+    margin-left: 20px;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    font-size: 30px;
+    width: 190px;
+    height: 60px;
+}
+
+.m_fast {
+    margin-left: 30px;
+}
+
+.m_mar {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.m_span {
+    font-size: 26px;
+    color: red;
+}
+
+.m_icon_button {
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    /* padding-bottom:20px; */
+    /* margin-left: -34px; */
+    
+    width: 36px;
+    height: 40px;
+}
+
+.m_icon {
+    width: 20px;
+    height: 17px;
+}
+
+.m_icon2 {
+    width: 20px;
+    height: 17px;
+}
+@media screen and (max-width:768px) {
+    .m_form{
+        margin: 0 auto;
+        width: 320px;
+    }
+    .m_label {
+        font-size: 20px;
+    }
+
+    .m_email {
+        width: 320px;
+        padding-left: 10px;
+        font-size: 20px;
+        height: 30px;
+    }
+
+    .m_password {
+        padding-left: 10px;
+        width: 290px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .m_doublepassword {
+        padding-left: 10px;
+        width: 290px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .m_name {
+        padding-left: 10px;
+        width: 320px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .m_phone {
+        padding-left: 10px;
+        width: 320px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .m_sb {
+        width: 150px;
+        font-size: 20px;
+    }
+
+    .m_clear {
+        width: 150px;
+        font-size: 20px;
+    }
+
+    .m_fast {
+        font-size: 20px;
+    }
+
+    .m_clear {
+        margin-left: 20px;
+    }
+
+
+    .m_mar {
+        margin-bottom: 20px;
+    }
+
+    .m_span {
+        font-size: 16px;
+        color: red;
+    }
+
+    .m_icon_button {
+       
+        width: 30px;
+        height: 30px;
+    }
+
+    .m_icon {
+        width: 20px;
+        height: 17px;
+    }
+
+    .m_icon2 {
+        width: 20px;
+        height: 16px;
+    }
+
+    .m_iner {
+        height: 950px;
+    }
+    .m_img{
+        width: 200px;
+        height: 200px;
+    }
+}

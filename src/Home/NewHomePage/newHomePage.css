@@ -1,0 +1,149 @@
+/* 最外框 */
+.newHomPageOutFrame {
+  display: flex;
+  flex-direction: column;
+  height: var(--vh100NoNavHeight);
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  position: relative;
+  min-height: 400px;
+  /* background: radial-gradient(circle at center center, red, purple); */
+  background: radial-gradient(#ccc5, #3893E850 15%, #eee5 100%);
+  overflow: visible;
+}
+
+/* 開門後字樣 */
+.newHomePageBackTexts {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+  animation: openDoorShowLogo 3s forwards;
+}
+
+@keyframes openDoorShowLogo {
+  0% {
+    opacity: 0;
+    scale: 1;
+  }
+  100% {
+    opacity: 1;
+    scale: 2;
+  }
+}
+
+/* 左半 */
+.newHomePageLeft {
+  /* background-color: #f999; */
+}
+
+.newHomePageLeft.open {
+  translate: 0 -200%;
+}
+
+/* 右半 */
+.newHomePageRight {
+  /* background-color: #99f9; */
+
+}
+
+.newHomePageRight.open {
+  translate: 0 200%;
+}
+
+/* 左右共通設定 */
+.newHomePageContent {
+  /* border: 10px transparent double; */
+  width: 100%;
+  height: 50%;
+  transition: .3s;
+  display: flex;
+}
+
+.newHomePageContent.open {
+  /* 開門效果時間 */
+  transition: 1s;
+}
+
+.newHomePageContent:hover {
+  /* border: 10px red double; */
+  background-color: #f5f50055;
+  /* box-shadow: 0 22px 70px 10px #F5F50099, inset 0 -20px 50px 20px #FFA50099; */
+  /* scale: 1.2; */
+}
+
+/* 隨機內容外框 */
+.randomContentOnHomePage {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+/* 隨機-文字 */
+.randomTitleOnHomePage {
+  text-align: center;
+  line-height: 1.5;
+  width: 60%;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+/* 隨機按鈕 */
+.randomButtonOnHomePage {
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--subColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width:768px) {
+
+  /* 最外框 */
+  .newHomPageOutFrame {
+    flex-direction: row;
+  }
+
+  /* 左半 */
+  .newHomePageLeft {
+
+    background: linear-gradient(90deg, transparent 50%, #eeee 60%);
+    clip-path: polygon(0 0, 55% 0, 45% 100%, 0% 100%);
+    justify-content: flex-start;
+  }
+
+  /* 右半 */
+  .newHomePageRight {
+    background: linear-gradient(-90deg, transparent 50%, #eeee 60%);
+    clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
+    justify-content: flex-end;
+  }
+
+  /* 左右共通設定 */
+  .newHomePageContent {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .newHomePageContent>div {
+    width: 50%;
+  }
+
+  .newHomePageLeft.open {
+    translate: -200%;
+  }
+
+  .newHomePageRight.open {
+    translate: 200%;
+  }
+
+  /* 隨機內容 */
+  .randomContentOnHomePage {
+    flex-direction: row;
+  }
+}

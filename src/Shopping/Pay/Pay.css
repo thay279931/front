@@ -1,0 +1,229 @@
+.payDetailBoxNumber {
+  aspect-ratio: 1;
+  padding: 10px;
+  color: #fff;
+  font-weight: 600;
+
+}
+
+.payDetailBox {
+  box-shadow: -5px -1px 5px #bbbb, 5px 5px 5px #bbbb;
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.payPageButton {
+  background-color: var(--mainColor);
+  color: #fff;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.payPageButton.locked:hover {
+  background-color: var(--mainColor);
+  color: #fff;
+}
+
+.payPageButton:hover {
+  /* background-color: var(--subColor); */
+  background-color: #f59900;
+  color: #000;
+}
+
+.payCouponFrame {
+  width: 50%;
+  /* align-self: stretch; */
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width:768px) {
+  .payDetailBox {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .payCouponFrame {
+    width: 33.33333%;
+  }
+}
+
+.payPageButton.locked {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.payPageFrame {
+  flex-direction: column-reverse;
+  background-color: #eee5;
+}
+
+.payPageFrameLeft {
+  width: 100%;
+}
+
+.OrederDetailForPay {
+  width: 100%;
+
+}
+
+.OrederDetailListForPay {
+  border: var(--mainColor) 5px solid;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.OrederDetailListForPay::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 60%;
+  height: 15px;
+  background: linear-gradient(to bottom, var(--mainColor), var(--mainColor) 100%, var(--subColor) 70%, var(--subColor) 100%);
+  top: -10px;
+  left: 50%;
+  translate: -50%;
+  z-index: 2;
+}
+
+.OrederDetailListForPay::after {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ccc, #ccc 30%, var(--mainColor) 30%, var(--mainColor) 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+  top: -25px;
+  left: 50%;
+  translate: -50%;
+}
+.dailyCouponOnPayTitle{
+  font-size: 32px;
+  color: var(--mainColor);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* //===============================================分隔線================================================ */
+/* 正常樣子 */
+.payCoupons {
+  aspect-ratio: 2 / 1;
+  position: relative;
+  background-color: var(--mainColor);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px 20px 10px;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  border: #fff 5px solid;
+  border-radius: 10px;
+}
+.payCoupons::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* border-radius: 50%; */
+  background: radial-gradient(var(--mainColor), var(--mainColor) calc(100% - 15px), #fff calc(100% - 15px), #fff calc(100% - 10px), var(--mainColor) calc(100% - 10px), var(--mainColor) 100%);
+  /* clip-path: polygon(0 0,100% 0,100% 100%); */
+}
+/* 不選擇 */
+.payCoupons.none {
+  background-color: #e59500;
+}
+.payCoupons.none::after{
+  background: radial-gradient( #e59500,  #e59500 calc(100% - 15px), #fff calc(100% - 15px), #fff calc(100% - 10px),  #e59500 calc(100% - 10px),  #e59500 100%);
+}
+/* 不足額 */
+.payCoupons.insufficient {
+  background-color: #CD8C15;
+  color: #727272;
+}
+.payCoupons.insufficient::after{
+  background: radial-gradient( #CD8C15,  #CD8C15 calc(100% - 15px), #fff calc(100% - 15px), #fff calc(100% - 10px),  #CD8C15 calc(100% - 10px),  #CD8C15 100%);
+}
+
+
+.payCoupons.active {
+  outline: 3px red solid;
+}
+
+/* //===============================================分隔線================================================ */
+
+.payDailyCouponShowCard {
+  background-color: var(--mainColor);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  outline: 3px red solid;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  padding: 15px;
+  font-size: 18px;
+  border: #fff 5px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  /* min-height: 200px; */
+  justify-content: space-between;
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+  line-height: 1.3;
+}
+
+.payDailyCouponShowCard::after {
+  display: block;
+  content: '';
+  /* background-color: #3893E8; */
+  background-color: var(--subColor);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* border-radius: 50%; */
+  background: radial-gradient(var(--mainColor), var(--mainColor) calc(100% - 15px), #fff calc(100% - 15px), #fff calc(100% - 10px), var(--mainColor) calc(100% - 10px), var(--mainColor) 100%);
+  /* clip-path: polygon(0 0,100% 0,100% 100%); */
+}
+
+
+@media screen and (min-width:768px) {
+  .payPageFrame {
+
+    flex-direction: row;
+  }
+
+  .payPageFrameLeft {
+    width: 60%;
+  }
+
+  .OrederDetailForPay {
+    width: 40%;
+  }
+
+  .OrederDetailListForPay {}
+}

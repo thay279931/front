@@ -1,0 +1,88 @@
+.mc_card {
+    height: 150px;
+    background-color:palegoldenrod;
+    position: relative;
+    display: flex;
+    min-height: 50px;
+    padding: 6px 0 6px 15px;
+    margin-top: 25px;
+    /* align-items: center; */
+    width: 90%;
+    border: 3px solid palegoldenrod;
+    margin-left: 22px;
+    transition: .5s;
+    justify-content: space-around;
+}
+
+.mc_card::before {
+    content: ' ';
+    width: 0;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    border-right: 6px dotted white;
+    top: 0;
+    left: -3px;
+}
+
+.mc_card::after {
+    content: ' ';
+    height: 100%;
+    position: absolute;
+    border-left: 6px dotted white;
+    top: 0;
+    right: -3px;
+}
+
+.mc_col {
+    align-items: center;
+    width: 50%;
+}
+
+.mc_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.mc_sale_detail{
+    font-size:30px;
+    line-height: 141px;
+}
+.mc_coupon{
+    font-size:24px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding-left: 6px;
+}
+
+.mc_card:hover{
+    transform: scale(1.1);
+    background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+}
+
+@media screen and (max-width:576px) {
+    .mc_col {
+        width: 100%;
+    }
+    .mc_sale_detail{
+    font-size:30px;
+    }
+    .mc_coupon{
+        font-size:16px;
+        padding-left: 10px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .mc_col {
+        width: 100%;
+    }
+    .mc_sale_detail{
+    font-size:30px;
+    }
+    .mc_coupon{
+        font-size:16px;
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,24 @@
+.adminMenu{
+  min-height: 300px;
+  border: 1px #eee solid;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  background-color:#ff5f00;
+  z-index: 10;
+  color: #000;
+  font-weight: 700;
+  
+}
+.menu.visiable{
+  opacity: 1;
+  display: flex;
+}
+.adminMenu>p{
+  cursor: pointer;
+}

@@ -1,0 +1,113 @@
+.oldOrderFrame {
+  border: 1px var(--mainColor) solid;
+  border-radius: 10px;
+}
+
+.oldOrderTopDetail {
+  border-bottom: 1px solid var(--mainColor);
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(-45deg, #fff 0%, #fff 95%, var(--mainColor), #ffccdd 96%, #fdffb2 97%, #c5e5ff 98%, #d6faff 99%, #d6ffee 100%);
+}
+
+.oldOrderStoreImgFrame {
+  width: 100%;
+  height: 200px;
+}
+.oldOrderStoreNotImgFrame{
+  width: 50%;
+}
+.oldOrderCommand {
+  color: var(--mainColor);
+  border: 3px solid var(--mainColor);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.reverseArrow.active {
+  rotate: 180deg;
+}
+
+.oldOrderCommand:hover {
+  background-color: var(--subColor);
+}
+
+.oldOrderStoreImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orderCommandBox {
+  border-radius: 10px;
+  background-color: #EFE587;
+  ;
+  margin: 50px auto 0;
+  /* max-height:500px ; */
+  height: 550px;
+  width: 300px;
+}
+
+.orderCommandBox textarea {
+  background-color: #ddc;
+}
+
+.memberOldOrderDetailProductCard {
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  background-color: var(--subColor);
+  border: 5px solid var(--mainColor);
+  box-shadow: -3px 0 6px -8px rgba(0, 40, 93, 0.08);
+}
+
+.memberOldOrderDetailProductCard::after {
+  display: block;
+  content: '';
+  /* background-color: #3893E8; */
+  background-color: var(--subColor);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* border-radius: 50%; */
+  background: radial-gradient(var(--subColor), var(--subColor) calc(100% - 15px), #fff calc(100% - 15px), #fff calc(100% - 10px), var(--subColor) calc(100% - 10px), var(--subColor) 100%);
+}
+
+.oldOrderOptionFrame {
+  background-color: #eaa;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width:768px) {
+  .emberOldOrderDetailProductCard {
+    height: 200px;
+  }
+
+  .orderCommandBox {
+    /* width: inherit; */
+
+  }
+
+  .oldOrderTopDetail {}
+
+  .oldOrderStoreImgFrame {
+    width: 20%;
+    height: auto;
+
+  }
+  .oldOrderStoreNotImgFrame{
+    width: 40%;
+  }
+}

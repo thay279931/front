@@ -1,0 +1,11 @@
+.couponForm {
+  position: fixed;
+  width: 400px;
+  /* height: 200px; */
+  background-color: #FFF;
+  left: calc(50% - 200px);
+  top: 20%;
+  z-index: 100;
+  display: none;
+  border-radius: 10px;
+}

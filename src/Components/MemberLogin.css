@@ -1,0 +1,59 @@
+.memberLoginForm{
+  border: 5px #ffa500 solid;
+  border-radius: 10px;
+  display: flex;
+  background-color:#ffa500;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: fit-content;
+  position: relative;
+  font-weight: 900;
+}
+.mar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+}
+.m_login_email{
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+}
+.m_login_password{
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+}
+.m_login_button{
+  width: 50px;
+  height: 30px;
+ background-color:black;
+ color: white;
+ font-size: 16px;
+ margin-top: 20px;
+}
+.m_box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.m_login_label{
+  font-size: 20px;
+}
+.ml_icon_button{
+  height: 30px;
+  width: 30px;
+  padding-top: 2px;
+  margin-left: 3px;
+}
+.ml_email{
+ padding-right: 33px;
+}
+.ml_buttonbox{
+  padding-right: 33px;
+}

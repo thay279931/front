@@ -1,0 +1,18 @@
+nav.storeNav {
+  height: 80px;
+  background-color: var(--subColor);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: sticky;
+  width: 100%;
+  justify-content: space-between;
+  color: var(--mainColor);
+  top: 0;
+  z-index: 10;
+}
+
+.logCheck.store {
+  background-color: var(--mainColor);
+  color: var(--subColor);
+}

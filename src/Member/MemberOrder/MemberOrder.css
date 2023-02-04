@@ -1,0 +1,228 @@
+.orderSelects {
+  /* border: 1px #ccc solid; */
+  padding: 5px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  height: 100%;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.orderSelects.active {
+  max-height: 500px;
+  height: auto;
+}
+
+.optionArrow.active {
+  rotate: 180deg;
+}
+
+.openedOptions {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.openedOptions:hover {
+  background-color: #3333ff;
+}
+
+.openedOptions.active {
+  background-color: var(--mainComplementary);
+}
+
+.ProgessStep {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+@media screen and (min-width:768px) {
+  .ProgessStep {
+    height: 60px;
+  }
+}
+
+.ProgessStep>div {
+  height: 100%;
+}
+
+.stepText {
+  width: 10%;
+  text-align: center;
+}
+
+.stepText>*,
+.stepLine>* {
+  height: 50%;
+  width: 100%;
+}
+
+.stepLine {
+  width: 20%;
+}
+
+.stepCircleFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepCircleFrame>div {
+  width: 33.333333%;
+}
+
+.step.line {
+  height: 5px;
+  background-color: var(--mainComplementary);
+}
+
+.step.circle {
+  aspect-ratio: 1;
+  border: solid 5px var(--mainComplementary);
+  border-radius: 50%;
+}
+
+.circle.active {
+  border: solid 5px var(--mainColor);
+}
+
+.line.active {
+  background-color: var(--mainColor);
+}
+
+.stepText>p {
+  color: var(--mainComplementary);
+  font-weight: 500;
+}
+
+.stepText>p.active {
+  color: var(--mainColor)
+}
+
+.orderButtonOnMap {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+  background-color: #fff;
+  padding: 10px;
+  transition: .5s;
+
+}
+
+.orderButtonOnMap.close {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.orderButtonOnMap.open {
+  overflow: auto;
+  max-height: 500px;
+  z-index: 5;
+
+  /* width: fit-content; */
+  min-width: 350px;
+}
+
+.orderButtonOnMapSVG {
+  fill: var(--mainColor);
+  width: 100%;
+  height: 100%;
+}
+
+.cycleFontOnMap {
+  z-index: 1;
+  font-size: 48px;
+  }
+
+.mapTranslate {
+  position: relative;
+  translate: -50% -50%;
+}
+
+.orderSelectWrap {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+.orderChatButton {
+  position: absolute;
+  left: 5px;
+  bottom: 30px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.orderChatButtonSVGFrame.active {
+  animation: buttonFlashing 1s infinite;
+}
+
+@keyframes buttonFlashing {
+  0% {
+    background-color: #fff;
+  }
+
+  50% {
+    background-color: var(--subColor);
+  }
+
+  100% {
+    background-color: #fff;
+  }
+}
+
+.orderChatButtonSVGFrame {
+  background-color: #fff;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.orderOnMapChattingBox {
+  z-index: 3;
+  position: absolute;
+  background-color: #fff;
+  width: 80%;
+  height: 400px;
+  left: 50%;
+  top: 10%;
+  translate: -50%;
+  /* overflow: auto; */
+}
+
+.orderOnMapChattingBoxContent {
+  overflow: auto;
+  max-height: 90%;
+  flex-direction: column-reverse;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.orderChattingBox {
+  width: 100%;
+  /* height: 70%; */
+  position: relative;
+  /* top: 20%; */
+  /* left: 50%; */
+  /* translate: -50%; */
+  padding: 5px;
+  padding-bottom: 0;
+  /* border: 1px red solid; */
+  /* max-height: 600px; */
+  /* background-color: #ccc; */
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-x: hidden;
+}

@@ -1,0 +1,88 @@
+.menu {
+  height: 500px;
+  width: 100%;
+  border: 1px #eee solid;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  background-color: var(--mainColor);
+  z-index: 10;
+  color: #000;
+  font-weight: 700;
+  top: var(--navHeight);
+  left: 0;
+}
+
+.disfHiddens {
+  display: flex;
+}
+
+.navMemberCenter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 15;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+@media screen and (min-width:768px) {
+  .navMemberCenter>p{
+    padding: 20px;
+  }
+  .navMemberCenter>p:hover{
+    background-color: #aaa;
+  }
+  .menu {
+    min-height: 300px;
+    min-width: 200px;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    /* top: 50px; */
+    left: 0;
+  }
+
+  .navMemberCenter {
+    position: fixed;
+    min-height: 300px;
+    min-width: 200px;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    top: var(--navHeight);
+    left: initial;
+    right: 40px;
+  }
+
+  .disfHiddens {
+    display: none;
+  }
+}
+
+.menu.visiable {
+  opacity: 1;
+  display: flex;
+}
+
+.menu>p,
+.navMemberCenter>p {
+  cursor: pointer;
+}
+
+.menu>.active,
+.navMemberCenter>.active {
+  color: #55f;
+}

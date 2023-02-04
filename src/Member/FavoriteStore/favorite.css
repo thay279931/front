@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mf_card {
+    height: 300px;
+    width: 90%;
+    border: 3px solid rgb(31, 29, 29);
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgb(110, 108, 108);
+    margin: 10px auto;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+}
+
+.mf_card:hover {
+    box-shadow: 10px 10px 10px rgb(151, 147, 147);
+    transform: translateY(-6px);
+}
+
+.mf_card:hover .mf_font1 {
+    letter-spacing: 1rem;
+    text-indent: 1rem;
+}
+
+.mf_col {
+    width: 25%;
+
+}
+
+.mf_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mf_card:hover .mf_imgbox {
+    transform: scale(1.1)
+}
+
+.mf_imgbox {
+    transition: .5s;
+}
+
+.mf_img {
+    transition: .5s;
+    height: 130px;
+    object-fit: cover;
+}
+
+.mf_font1 {
+    font-size: 30px;
+    text-align: center;
+    transition: .5s;
+    padding: 8px;
+}
+
+.mf_font2 {
+    font-size: 16px;
+    padding: 5px;
+
+}
+
+.mf_font3 {
+    font-size: 16px;
+    padding: 5px;
+
+}
+.mf_h2{
+    font-size: 50px;
+    text-align: center;
+}
+
+.mf_icon{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 30px;
+}
+
+.mf_search{
+    display: flex;
+    justify-content: center;
+}
+
+.mf_search_input{
+    width: 250px;
+    height: 40px;
+    font-size: 26px;
+    border-radius: 5px;
+    border-color:#FFA500;
+}
+
+.mf_search_button{
+    width: 40px;
+    border-radius: 5px;
+    border-color:#FFA500;
+    background-color: #FFA500;
+}
+
+.mf_search_icon{
+   font-size: 25px;
+   cursor: pointer;
+}
+
+.mf_errorfont{
+    text-align: center;
+    font-size: 30px;
+}
+
+@media screen and (max-width:576px) {
+    .mf_col {
+        width: 100%;
+    }
+
+    .mf_img {
+        height: 200px;
+    }
+
+    .mf_font1 {
+        padding: 14px;
+    }
+    .mf_font2 {
+        padding: 10px;
+    }
+    .mf_font3 {
+        padding: 10px;
+    }
+    .mf_card {
+        height: 370px;
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+    .mf_col {
+        width: 100%;
+    }
+
+    .mf_img {
+        height: 200px;
+    }
+
+    .mf_font1 {
+        padding: 14px;
+    }
+    .mf_font2 {
+        padding: 10px;
+    }
+    .mf_font3 {
+        padding: 10px;
+    }
+    .mf_card {
+        height: 370px;
+    }
+
+}

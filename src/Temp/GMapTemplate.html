@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Geolocation</title>
+	<style>
+		#myMap{
+			width: 600px;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+<div id="myMap"></div>
+<div id="info"></div>
+<!-- 																								key在這裡 -->
+<script src="https://maps.googleapis.com/maps/api/js?key=???????"></script>
+<script>
+const positionHandler = (position)=>{
+	const lat = position.coords.latitude; // 緯度
+	const lng = position.coords.longitude; // 經度
+	console.log(lat, lng);
+
+	//取得地圖座標
+	const latlng = new google.maps.LatLng(lat, lng);
+
+	const myOptions = {
+		zoom: 13,
+		center: latlng,
+		mapTypId: google.maps.MapTypeId.ROADMAP
+	};
+	//建立地圖
+	const map = new google.maps.Map(document.querySelector('#myMap'), myOptions);
+	//建立標記
+	const marker = new google.maps.Marker({ position: latlng, title: "標記的名稱" });
+	marker.setMap(map); // 把標記放入地圖
+
+	new google.maps.Marker({
+		position: new google.maps.LatLng(lat, lng+0.02),
+		title: "標記2"
+	}).setMap(map);
+
+	// *** 利用座標取得地址 ***
+	const geocoder = new google.maps.Geocoder();
+	
+	geocoder.geocode({ 'latLng': latlng }/*{ 'address': address}*/, function (result, status) {
+		console.log(result);
+		if (status === google.maps.GeocoderStatus.OK) {
+			const address = result[0].formatted_address; //取得地址
+			document.querySelector('#info').innerHTML = address;
+		}
+	})
+};
+
+// 取得目前位置經緯度
+navigator.geolocation.getCurrentPosition(positionHandler, error=>{
+	alert(JSON.stringify(error));
+});
+</script>
+</body>
+</html>

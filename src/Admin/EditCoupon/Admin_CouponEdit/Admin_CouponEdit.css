@@ -1,0 +1,18 @@
+.couponForm{
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  translate: -50%;
+  z-index: 100;
+  padding: 5px;
+  border: 1px red solid;
+  background-color: #eee;
+}
+.setTextRed{
+  color: red;
+}
+.setTextGreen{
+  color: green;
+}

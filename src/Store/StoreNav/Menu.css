@@ -1,0 +1,25 @@
+.storeMenu{
+  min-height: 300px;
+  border: 1px #eee solid;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  position: fixed;
+  background-color: var(--subColor);
+  z-index: 10;
+  color: #000;
+  font-weight: 700;
+  top: 80px;
+  left: 0;
+}
+.menu.visiable{
+  opacity: 1;
+  display: flex;
+}
+.storeMenu>p{
+  cursor: pointer;
+}

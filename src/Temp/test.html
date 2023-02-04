@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../reset.css" />
+    <title>Document</title>
+    <style>
+      :root {
+        --mainColor: #ccc;
+      }
+      /* div {
+        width: 100px;
+        height: 100px;
+      } */
+      .circle {
+        clip-path: circle(50% at 50% 50%);
+        border: 5px var(--mainColor) solid;
+        border-radius: 50%;
+        background-color: transparent;
+      }
+      .fl {
+        display: flex;
+        width: fit-content;
+        background-color: transparent;
+        align-items: center;
+        width: 80%;
+      }
+      .line {
+        height: 5px;
+        background-color: var(--mainColor);
+      }
+      .circle.step1::before {
+        /* content: '等待店家接單'; */
+      }
+      .fl > div {
+        width: 14.2857%;
+        aspect-ratio: 1;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fr">
+      <div class="fl">
+        <div>等待店家接單</div>
+        <div></div>
+        <div>餐點製作中</div>
+        <div></div>
+        <div>等待取餐中</div>
+        <div></div>
+        <div>送達中</div>
+      </div>
+      <div class="fl">
+        <div class="circle step1"></div>
+        <div class="line step2"></div>
+        <div class="circle step2"></div>
+        <div class="line step3"></div>
+        <div class="circle step3"></div>
+        <div class="line step4"></div>
+        <div class="circle step4"></div>
+      </div>
+    </div>
+  </body>
+</html>

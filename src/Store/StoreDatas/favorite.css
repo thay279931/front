@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0 ;  
+}
+.con{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    width: 25%;
+    /* margin: 3px; */
+    position: relative;
+
+}
+
+.font1{
+    font-size: 12px;
+}
+.font2{
+    font-size: 12px;
+
+}
+.font3{
+    font-size: 12px;
+
+}
+.icon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+@media screen and (max-width:576px) {
+    .col{
+        width: 100%;
+    }
+}

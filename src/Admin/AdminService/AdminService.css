@@ -1,0 +1,84 @@
+.chooseChattingPersonPlate {
+  width: 80%;
+  background-color: #ccc;
+  height: 20%;
+  display: flex;
+  margin: auto;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminChooseChat {
+  flex-direction: column;
+}
+
+.adminChatPersonsBlock {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 1px red solid;
+  cursor: pointer;
+}
+
+.chattingBox {
+  min-width: 50%;
+  height: 50%;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  translate: -50%;
+  z-index: 100;
+  padding: 5px;
+  padding-bottom: 0;
+  border: 1px red solid;
+  max-height: 600px;
+  background-color: #ccc;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-x: hidden;
+}
+
+.chatInputFrame {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  /* background-color: #ccc; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chatContent {
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  gap: 5px;
+  /* max-height: 1000px; */
+  /* overflow: auto; */
+  /* padding: 10px; */
+  padding-bottom: 50px;
+}
+
+.ChatSetRight {
+  align-self: flex-end;
+  background-color: #afa;
+}
+
+.ChatSetLeft {
+  align-self: flex-start;
+  background-color: #fff;
+}
+
+.chatBlocks {
+  border: 1px red solid;
+  padding: 5px;
+  max-width: 50%;
+  word-wrap:break-word;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* flex-basis: 0; */
+}
